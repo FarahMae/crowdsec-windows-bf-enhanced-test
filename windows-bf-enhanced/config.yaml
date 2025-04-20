@@ -1,0 +1,9 @@
+parsers:
+  - crowdsecurity/syslog-logs
+  - crowdsecurity/windows-logs
+scenarios:
+  - crowdsecurity/windows-bf
+postoverflows: []
+log_file: windows-bf-enhanced.log
+log_type: syslog
+

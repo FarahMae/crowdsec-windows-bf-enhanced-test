@@ -1,0 +1,11 @@
+len(results) == 2
+len(results["s00-raw"]["crowdsecurity/syslog-logs"]) == 1
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Success == true
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Parsed["logsource"] == "syslog"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Parsed["message"] == "An account failed to log on. Subject: Security ID: NULL SID Logon ID: 0x0 Account Name: - Account Domain: - Logon Type: 3 Account For Which Logon Failed: Security ID: NULL SID Account Name: testuser Workstation Name: WIN-HOSTNAME Failure Information: Failure Reason: Unknown user name or bad password Status: 0xc000006d Sub Status: 0xc000006a"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Parsed["program"] == "Microsoft-Windows-Security-Auditing"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Parsed["timestamp"] == "Feb 15 08:42:30"
+basename(results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Meta["datasource_path"]) == "windows-bf-enhanced.log"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Meta["datasource_type"] == "file"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Meta["machine"] == "WIN-HOSTNAME"
+results["s00-raw"]["crowdsecurity/syslog-logs"][0].Evt.Whitelisted == false
