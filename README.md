@@ -88,16 +88,3 @@ Cybersecurity Enthusiast | SOC & Threat Detection Projects
 
 License
 This project is licensed under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you'd like me to upload this as a ready-to-use `README.md` file or add extra details like:
-- ✅ Test success badge  
-- 🛡 Threat detection use case  
-- 📸 Screenshot of terminal
-
-Or… ready to move on to **Zoraxy parser test** next?
