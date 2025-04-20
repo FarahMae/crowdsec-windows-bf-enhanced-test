@@ -23,17 +23,9 @@ Windows authentication logs often contain valuable information about failed logi
 
 windows-bf-enhanced/ ├── config.yaml # Specifies which parsers to test ├── parser.assert # Validates parser output fields ├── scenario.assert # Ensures no scenarios are incorrectly triggered └── windows-bf-enhanced.log # Simulated Windows Security log (failed logon)
 
-shell
-Copy
-Edit
-
 ## Sample Log Used
 
 Feb 15 08:42:30 WIN-HOSTNAME Microsoft-Windows-Security-Auditing: An account failed to log on. Subject: Security ID: NULL SID Logon ID: 0x0 Account Name: - Account Domain: - Logon Type: 3 Account For Which Logon Failed: Security ID: NULL SID Account Name: testuser Workstation Name: WIN-HOSTNAME Failure Information: Failure Reason: Unknown user name or bad password Status: 0xc000006d Sub Status: 0xc000006a
-
-bash
-Copy
-Edit
 
 ## How to Use
 
@@ -44,39 +36,24 @@ Edit
    git clone https://github.com/crowdsecurity/hub
    cd hub
 Copy this test into your .tests folder
-
-bash
-Copy
-Edit
 cp -r /path/to/crowdsec-windows-bf-enhanced-test/windows-bf-enhanced .tests/
-Run the test
 
-bash
-Copy
-Edit
+Run the test:
 sudo cscli hubtest run windows-bf-enhanced
-Expected Output
 
-css
-Copy
-Edit
+Expected Output:
 All tests passed, use --report-success for more details.
 This means the log was successfully parsed, and no false alerts were triggered.
 
 Technical Details
 Test Type: syslog
-
 Parsers Tested:
-
 crowdsecurity/syslog-logs
-
 crowdsecurity/dateparse-enrich
-
 Expected Behavior: Parser extracts all relevant fields correctly; no scenario (alert) is expected to trigger with just a single log.
 
 Related Issue
 This test was built to support:
-
 Issue #1235 - Should catch windows BF target username
 
 About the Author
