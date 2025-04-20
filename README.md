@@ -1,5 +1,9 @@
 # CrowdSec Windows Brute-force Enhanced Detection Test
 
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![Log](https://img.shields.io/badge/Log-Windows%20Syslog-yellow)
+
 This repository provides a custom parser test for CrowdSec to verify enhanced detection of failed Windows login attempts. It focuses specifically on the accurate extraction of the **target username**, in response to [CrowdSec Hub Issue #1235](https://github.com/crowdsecurity/hub/issues/1235).
 
 ## Overview
