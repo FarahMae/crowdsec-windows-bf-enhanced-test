@@ -32,24 +32,32 @@ Feb 15 08:42:30 WIN-HOSTNAME Microsoft-Windows-Security-Auditing: An account fai
 > ✅ Prerequisites: CrowdSec v1.6+ installed and the `cscli` tool available.
 
 1. **Clone the CrowdSec Hub repository**
-   ```bash
+
    git clone https://github.com/crowdsecurity/hub
    cd hub
 Copy this test into your .tests folder
+
 cp -r /path/to/crowdsec-windows-bf-enhanced-test/windows-bf-enhanced .tests/
 
 Run the test:
+
 sudo cscli hubtest run windows-bf-enhanced
 
 Expected Output:
+
 All tests passed, use --report-success for more details.
 This means the log was successfully parsed, and no false alerts were triggered.
 
 Technical Details
+
 Test Type: syslog
+
 Parsers Tested:
+
 crowdsecurity/syslog-logs
+
 crowdsecurity/dateparse-enrich
+
 Expected Behavior: Parser extracts all relevant fields correctly; no scenario (alert) is expected to trigger with just a single log.
 
 Related Issue
